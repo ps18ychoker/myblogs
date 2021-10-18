@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-    //
+
     protected function create1($data , $msg = '' , $code = 200): Response
     {
         $result = [

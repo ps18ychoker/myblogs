@@ -48,7 +48,7 @@ class BlogController extends Controller
 //            'body' => '内容'
 //        ]);
         $data = $this->validataData();
-        $data[bg_img] = 'banner4.jpg';
+        $data['bg_img'] = 'banner4.jpg';
 //        dd(\request()->all());
         Blog::query()->create($data);
 //        $blog = new Blog();

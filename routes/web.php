@@ -39,6 +39,8 @@ use Illuminate\Support\Facades\Route;
 //    return view('post',['post' => $blogs[$post]]);
 //});
 //Route::get('blogs/{post}',[\App\Http\Controllers\PostController::class,'show']);
+
+
 Route::get('posts/{post}',[\App\Http\Controllers\PostController::class,'show']);
 
 
@@ -51,6 +53,7 @@ Route::put('blogs/{blog}',[\App\Http\Controllers\BlogController::class,'update']
 Route::get('blogs/{blog}/edit',[\App\Http\Controllers\BlogController::class,'edit']);
 Route::post('blogs',[\App\Http\Controllers\BlogController::class,'store']);
 
-
-Route::get('projects/create',[\App\Http\Controllers\ProjectController::class,'create']);
-Route::get('projects/{id}',[\App\Http\Controllers\ProjectController::class,'show']);
+//Route::get('user',[\App\Http\Controllers\UserController::class,'index']);
+Route::resource('user',\App\Http\Controllers\UserController::class);
+Route::get('user/create',[\App\Http\Controllers\UserController::class,'create']);
+Route::post('users',[\App\Http\Controllers\UserController::class,'store']);
